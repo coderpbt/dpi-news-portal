@@ -77,7 +77,7 @@ categoryID.forEach(cardItem => {
           <div class="author-detalis d-flex justify-content-between align-items-center">
             <div class="d-flex">
             <div class="round-img">
-            <img src="${cardItem.author.img}" class="img-fluid rounded-start" alt="...">
+            <img src="${cardItem.author.img}" class="img-fluid rounded-start" alt="Author">
            </div>
           
            <div class="authorName">
