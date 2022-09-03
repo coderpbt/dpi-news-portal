@@ -126,6 +126,7 @@ const getLoading = isLoading => {
   }
 }
 
+//Details news id get
 const loadCatagotyDetails = async (news_id) => {
  const url = `https://openapi.programming-hero.com/api/news/${news_id}`;
  const res = await fetch(url);
@@ -133,6 +134,9 @@ const loadCatagotyDetails = async (news_id) => {
  displaySingleCatgoryData(data.data[0])
 
 }
+
+
+//modal data show
 
 const displaySingleCatgoryData = (productItem) =>{
   console.log(productItem)
