@@ -11,6 +11,7 @@ const loadCatagotyData = async () => {
   
 }
 
+// Display catagory data
 const displayCatagoryData = (catagory) => {
   const prantUi = document.getElementById('prantUi')
   
@@ -28,7 +29,7 @@ const displayCatagoryData = (catagory) => {
    
 }
 
-
+// load catagory data
 const loadCatagotyDataID = async(id) => {
   const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
   try {
@@ -140,6 +141,7 @@ const displaySingleCatgoryData = (productItem) =>{
   bodyID.innerHTML = `
     <img src="${productItem.thumbnail_url}" class="img-fluid w-100 rounded-start" alt="...">
     <p class="m-3">${productItem.details}</p>
+    <img src="${productItem.author.img}" class="img-fluid authorMdl rounded-start" alt="Author">
     <h5 class="card-text"><small class="text-muted">Author Name : ${productItem.author.name ? productItem.author.name : 'Not Found <i class="fa-regular fa-face-sad-tear"></i>'}</small></h5>
     <h5 class="card-text"><small class="text-muted">Publish : ${productItem.author.published_date ? productItem.author.published_date : 'Not Found <i class="fa-regular fa-face-sad-tear"></i>'}</small></h5>
     <h5 class="card-text"><small class="text-muted">Rating : ${productItem.rating.badge ? productItem.rating.badge : 'Not Found <i class="fa-regular fa-face-sad-tear"></i>'}</small></h5>
