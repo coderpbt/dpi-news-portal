@@ -1,0 +1,31 @@
+.round-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+@media all and (max-width:575px){
+  .mobile-view {
+      flex-direction: column;
+  }
+  .mobile-view .short-filter h5 {
+      flex: 0 0 100%;
+  }
+  .mobile-view .short-filter select {
+      flex: 0 0 100%;
+  }
+  .short-filter {
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+  }
+  .col-md-3.news-img img {
+    width: 100%;
+  }
+  .author-detalis {
+    flex-direction: column;
+    text-align: start;
+    justify-content: flex-start;
+}
+}

@@ -1,12 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hello</h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DPI News Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8ebda4dff2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- header area -->
+    <header class="bg-light p-2">
+      <div class="container">
+       <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><span class="bg-primary p-2 text-white rounded">DPI-NEWS</span> portal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse flex-grow-0 navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+       </nav>
+     </div>
+    </header>
+    <div class="catagory">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+         <div class="container-fluid">
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           
+           <div class="collapse flex-grow-0 navbar-collapse" id="navbarSupportedContent">
+             <ul id="prantUi" class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+             </ul>
+           </div>
+          
+         </div>
+        </nav>
+      </div>
+    </div>
+    <!-- header area -->
+    <main class="container">
+      <!-- item found -->
+      <div id="productFound" class="product-found">
+        <h5 class="text-dark p-2 mt-3 bg-white border"><span id="productFoundItem">0</span> News Found</h5>
+      </div>
+      <!-- item found -->
+
+      <!-- short items -->
+      <div class="mobile-view d-flex justify-content-between align-items-center py-4 mb-4">
+        <div class="short-filter d-flex w-50">
+          <h5 class="w-25 d-inline">Sort By View:</h5>
+          <select class="form-select w-25" aria-label="Default select example">
+            <option selected>Default</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="short-right">
+          <button class="btn btn-primary" type="submit">Today’s Pick</button>
+          <button type="button" class="btn btn-outline-primary">Trending</button>
+        </div>
+      </div>
+      <!-- short items -->
+
+      <!-- card item -->
+      <div id="cardContainer" class="cardContainer">
+   
+      </div>
+      <!-- card item -->
+
+      <!-- loder section -->
+      <section id="loder" class="d-none">
+        <div style="height: 400px" class="d-flex justify-content-center align-items-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </section>
+       <!-- loder section -->
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div id="bodyID" class="modal-body mx-auto">
+               
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- modal -->
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
