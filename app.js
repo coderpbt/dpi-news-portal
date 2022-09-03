@@ -42,26 +42,26 @@ const loadCatagotyDataID = async(id) => {
 loadCatagotyDataID('08');
 
 
-
 const displayProductGallery = categoryID => {
-  console.log(categoryID);
   const cardContainer = document.getElementById('cardContainer');
   cardContainer.innerHTML = '';
- 
-
+    
   const productFoundItem = document.getElementById('productFoundItem');
   productFoundItem.innerText = categoryID.length;
 
-//   const sorttt = (categoryID) => {
-//   for (const sorts of categoryID) {
-//     console.log(sorts)
-//     sorts.sort((a, b) => {
-//     return b.sorts.total_view - a.sorts.total_view;
-//     });
-//   }
-// }
-// sorttt();
-  
+  categoryID.sort((a, b) => {
+    let fa = a.total_view,
+        fb = b.total_view;
+
+    if (fa > fb) {
+        return -1;
+    }
+    if (fa < fb) {
+        return 1;
+    }
+    return 0;
+});
+ 
 categoryID.forEach(cardItem => {
     const div = document.createElement('div');
     div.innerHTML = `
@@ -72,7 +72,7 @@ categoryID.forEach(cardItem => {
       </div>
       <div class="col-md-9">
         <div class="card-body">
-          <h5 class="card-title">${cardItem.title}</h5>
+          <h5 class="card-title">${cardItem.title ? cardItem.title : 'Not Found <i class="fa-regular fa-face-sad-tear"></i>'}</h5>
           <p class="card-text pb-4 pt-2"> ${cardItem.details.slice(0, 450)} ...</p>
           <div class="author-detalis d-flex justify-content-between align-items-center">
             <div class="d-flex">
@@ -82,7 +82,7 @@ categoryID.forEach(cardItem => {
           
            <div class="authorName">
             <h5 class="card-text"><small class="text-muted">${cardItem.author.name ? cardItem.author.name : 'Not Found <i class="fa-regular fa-face-sad-tear"></i>'}</small></h5>
-            <p class="card-text"><small class="text-muted">${cardItem.author.published_date}</small></p>
+            <p class="card-text"><small class="text-muted">${cardItem.author.published_date ? cardItem.author.published_date : 'Not Found <i class="fa-regular fa-face-sad-tear"></i>'}</small></p>
            </div>
             </div>
             <div class="views">
