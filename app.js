@@ -42,7 +42,7 @@ const loadCatagotyDataID = async(id) => {
 }
 loadCatagotyDataID('08');
 
-
+// Display catagory data full data
 const displayProductGallery = categoryID => {
   const cardContainer = document.getElementById('cardContainer');
   cardContainer.innerHTML = '';
