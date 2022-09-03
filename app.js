@@ -50,6 +50,7 @@ const displayProductGallery = categoryID => {
   const productFoundItem = document.getElementById('productFoundItem');
   productFoundItem.innerText = categoryID.length;
 
+  //data shorting
   categoryID.sort((a, b) => {
     let fa = a.total_view,
         fb = b.total_view;
@@ -115,7 +116,7 @@ categoryID.forEach(cardItem => {
  
 }
 
-
+//click to loading spnieer
 const getLoading = isLoading => {
   const loder =document.getElementById('loder');
   if(isLoading){
